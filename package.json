@@ -1,0 +1,37 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "cross-env DB_ENV=testing jest --watch"
+  },
+  "repository": "git+https://github.com/Build-Week-Wunderlist-4/Backend.git",
+  "keywords": [],
+  "author": "<mark.allison75@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Build-Week-Wunderlist-4/Backend/issues"
+  },
+  "homepage": "https://github.com/Build-Week-Wunderlist-4/Backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "gitignore": "^0.6.0",
+    "helmet": "^3.21.3",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.10",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
