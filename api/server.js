@@ -1,21 +1,35 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
+const express = require("express");
+const helmet = require("helmet");
+const cors = require("cors");
 
-const authenticate = require('../auth/authenticate-middleware.js');
-const authRouter = require('../auth/auth-router.js');
+// AUTHENTICATION IMPORT
+const { authenticate } = require("../auth/authenticate.js");
 
+// ROUTER IMPORTS
+const authRouter = require("../routers/auth/authRouter.js");
+const userRouter = require("../routers/users/userRouter");
+const tasksRouter = require("../routers/tasks/tasksRouter");
+const categoriesRouter = require("../routers/categories/categoriesRouter.js");
 const server = express();
 
-server.use(helmet());
-server.use(cors());
+//MIDDLEWARE
 server.use(express.json());
+server.use(cors());
+server.use(helmet());
 
-server.use('/api/auth', authRouter);
+// ROUTERS
+server.use("/api/auth", authRouter);
+server.use("/api/user", authenticate, userRouter);
+server.use("/api/tasks", authenticate, tasksRouter);
+server.use("/api/categories", authenticate, categoriesRouter);
 
-
-server.get("/", (req, res) => {
-    res.json({message: "Do Or Do Not There Is No Try!"})
-})
+if (process.env.allow_debug) {
+  const testsRouter = require("../routers/tests/testRouter");
+  server.use("/api/tests", testsRouter);
+}
+//  GET ENDPOINT FOR /
+server.get("/", async (req, res) => {
+  res.status(200).json({ api: "Do Or Do Not There Is No Try!" });
+});
 
 module.exports = server;
