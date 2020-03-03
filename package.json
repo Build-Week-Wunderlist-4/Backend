@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
+    "start": "node index.js",
     "test": "cross-env DB_ENV=testing jest --watch"
   },
   "repository": "git+https://github.com/Build-Week-Wunderlist-4/Backend.git",
