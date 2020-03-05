@@ -8,19 +8,18 @@ const person = {
   uid: uidgen.generateSync(),
   username: faker.internet.userName().toLowerCase(),
   password: bcrypt.hashSync(faker.internet.password()),
-  email: faker.internet.email(),
-  imageUrl: faker.internet.avatar()
+  email: faker.internet.email()
+  
 };
 
 const people = [];
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 10; i++) {
   people.push({
     uid: uidgen.generateSync(),
     username: faker.internet.userName(),
     password: bcrypt.hashSync(faker.internet.password()),
-    email: faker.internet.email(),
-    imageUrl: faker.internet.avatar()
+    email: faker.internet.email()
   });
 }
 
@@ -30,21 +29,21 @@ exports.seed = function(knex, Promise) {
       uid: "DnuzdSXCtMgmRWDCRRE1iQ",
       username: "jon",
       password: bcrypt.hashSync("qwerty"),
-      email: "jon@google.com",
+      email: "jon@google.com"
       
     },
     {
       uid: uidgen.generateSync(),
       username: "kelly",
       password: bcrypt.hashSync("ytrewq"),
-      email: "kelly@amazon.com",
-      
+      email: "kelly@amazon.com"
+     
     },
     {
       uid: uidgen.generateSync(),
       username: "kevin",
       password: bcrypt.hashSync("pasta"),
-      email: "kevin@ubilink.com",
+      email: "kevin@ubilink.com"
       
     },
     ...people

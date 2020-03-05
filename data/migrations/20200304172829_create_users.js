@@ -6,16 +6,15 @@ exports.up = function(knex, Promise) {
         .string("username", 128)
         .notNullable()
         .unique("username");
-      tbl.string("password", 128).notNullable();
+      tbl.string("password", 128).notNullable()
       tbl
         .string("email", 128)
         .notNullable()
         .unique("email");
-      // tbl.string("imageUrl", 255).defaultTo('https://www.google.com/')
-      tbl.timestamps(true, true);
+      tbl.timestamps(true, true)
     });
   };
   
   exports.down = function(knex, Promise) {
-    return knex.schema.dropTableIfExists("users");
+    return knex.schema.dropTableIfExists("users")
   };

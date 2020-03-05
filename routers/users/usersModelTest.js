@@ -1,6 +1,6 @@
 const request = require("supertest");
 const db = require("../../data/dbConfig.js");
-const Users = require("./userModel.js");
+const Users = require("./usersModel.js/index.js");
 
 describe("usersModel", () => {
   afterEach(async () => {

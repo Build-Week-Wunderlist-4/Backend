@@ -7,7 +7,7 @@ const { authenticate } = require("../auth/authenticate.js");
 
 // ROUTER IMPORTS
 const authRouter = require("../routers/auth/authRouter.js");
-const userRouter = require("../routers/users/userRouter");
+const userRouter = require("../routers/users/usersRouter");
 const tasksRouter = require("../routers/tasks/tasksRouter");
 const categoriesRouter = require("../routers/categories/categoriesRouter.js");
 const server = express();

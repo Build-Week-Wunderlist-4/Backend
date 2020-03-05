@@ -9,14 +9,14 @@ module.exports = {
 async function findById(id) {
   return (users = await db("users")
     .where({ uid: id })
-    .select("username", "email", "imageUrl")
+    .select("username", "email")
     .first());
 }
 
 async function updateById(data, id) {
   const user = await db("users")
     .where({ uid: id })
-    .update({ email: data.email, imageUrl: data.imageUrl });
+    .update({ email: data.email });
   return user;
 }
 
