@@ -56,7 +56,7 @@ router.post("/register", async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: `Internal Error, ${err}` });
   }
-});
+})
 
 router.post("/login", async (req, res) => {
   const lowerCase = req.body.username.toLowerCase();
