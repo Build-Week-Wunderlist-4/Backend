@@ -51,6 +51,54 @@ describe('POST', ()=> {
               .post("/sanitycheck")
               .expect(404);
           })});
+          describe("GET /task", () => {
+            it("should return 404 Not Found", () => {
+              return request(server)
+                .get("/sanitycheck")
+                .expect(404);
+            })});
+            describe("POST /task", () => {
+              it("should return 404 Not Found", () => {
+                return request(server)
+                  .post("/sanitycheck")
+                  .expect(404);
+              })});
+              describe("Put /task", () => {
+                it("should return 404 Not Found", () => {
+                  return request(server)
+                    .post("/sanitycheck")
+                    .expect(404);
+                })}); 
+                describe("Delete /task", () => {
+                  it("should return 404 Not Found", () => {
+                    return request(server)
+                      .post("/sanitycheck")
+                      .expect(404);
+                  })});
+                  describe("GET /users", () => {
+                    it("should return 404 Not Found", () => {
+                      return request(server)
+                        .get("/sanitycheck")
+                        .expect(404);
+                    })});
+                    describe("POST /users", () => {
+                      it("should return 404 Not Found", () => {
+                        return request(server)
+                          .post("/sanitycheck")
+                          .expect(404);
+                      })});
+                      describe("Put /users", () => {
+                        it("should return 404 Not Found", () => {
+                          return request(server)
+                            .post("/sanitycheck")
+                            .expect(404);
+                        })}); 
+                        describe("Delete /users", () => {
+                          it("should return 404 Not Found", () => {
+                            return request(server)
+                              .post("/sanitycheck")
+                              .expect(404);
+                          })});
 });
 
 
