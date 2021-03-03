@@ -99,6 +99,62 @@ describe('POST', ()=> {
                               .post("/sanitycheck")
                               .expect(404);
                           })});
+                          describe("GET /Joker", () => {
+                            it("should return 404 Not Found", () => {
+                              return request(server)
+                                .get("/sanitycheck")
+                                .expect(404);
+                            })});
+                            describe("POST /Joker", () => {
+                              it("should return 404 Not Found", () => {
+                                return request(server)
+                                  .post("/sanitycheck")
+                                  .expect(404);
+                              })});
+                              describe("Put /joker", () => {
+                                it("should return 404 Not Found", () => {
+                                  return request(server)
+                                    .post("/sanitycheck")
+                                    .expect(404);
+                                })}); 
+                                describe("Delete /joker", () => {
+                                  it("should return 404 Not Found", () => {
+                                    return request(server)
+                                      .post("/sanitycheck")
+                                      .expect(404);
+                                  })});  
+                                  describe("GET /user:id", () => {
+                                    it("should return 404 Not Found", () => {
+                                      return request(server)
+                                        .get("/sanitycheck")
+                                        .expect(404);
+                                    })});
+                                    describe("POST /user:id", () => {
+                                      it("should return 404 Not Found", () => {
+                                        return request(server)
+                                          .post("/sanitycheck")
+                                          .expect(404);
+                                      })});
+                                      describe("Put /user:id", () => {
+                                        it("should return 404 Not Found", () => {
+                                          return request(server)
+                                            .post("/sanitycheck")
+                                            .expect(404);
+                                        })}); 
+                                        describe("Delete /user:id", () => {
+                                          it("should return 404 Not Found", () => {
+                                            return request(server)
+                                              .post("/sanitycheck")
+                                              .expect(404);
+                                          })}); 
+                                          describe('Post/ ', () => {
+                                            it('should create a new post', () => {
+                                              return request(server)
+                                              .post('/tasks')
+                                              .expect(404)
+                                              
+                                            })
+                                          })                
 });
 
 
